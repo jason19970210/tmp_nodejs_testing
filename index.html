@@ -4,13 +4,15 @@
     </head>
 
     <body>
-        <h1>Hello World</h1>
+        <h1>waiting for mqtt publish msg</h1>
+        <p id='message'>::init message::</p>
         <script src="/socket.io/socket.io.js"></script>
         <script>
             var socket = io();
             socket.on('test', function (msg){
                 console.log('test');
                 console.log(msg);
+                document.getElementById('message').innerHTML = msg
             })
         </script>
     </body>
