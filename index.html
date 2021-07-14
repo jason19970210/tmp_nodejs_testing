@@ -12,7 +12,8 @@
             socket.on('test', function (msg){
                 console.log('test');
                 console.log(msg);
-                document.getElementById('message').innerHTML = msg
+                // document.getElementById('message').innerHTML = msg
+                document.writeln("<p>"+msg+"</p>");
             })
         </script>
     </body>
