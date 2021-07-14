@@ -16,6 +16,7 @@ mqtt_client.on('connect', function(){
 })
 
 mqtt_client.on('message', (_, msg) => {
+    console.log(msg.toString());
     // store msg to redis database
     io.sockets.emit('test', msg.toString()); // to all socket clients
 })
