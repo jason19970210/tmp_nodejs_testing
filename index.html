@@ -13,7 +13,12 @@
                 console.log('test');
                 console.log(msg);
                 // document.getElementById('message').innerHTML = msg
-                document.writeln("<p>"+msg+"</p>");
+                // document.writeln("<p>"+msg+"</p>");
+                let p = document.createElement('p');
+                // div.className = "alert";
+                // div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+                p.innerHTML = msg
+                document.body.append(p);
             })
         </script>
     </body>
